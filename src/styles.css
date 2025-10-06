@@ -178,6 +178,26 @@ body,html,#root{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe 
   .tracking-top{justify-content:center}
 }
 
+/* selected (not today) — full yellow fill and clear highlight */
+.react-calendar__tile--active:not(.react-calendar__tile--now),
+.react-calendar__tile--active:not(.react-calendar__tile--now) button {
+  background: linear-gradient(90deg, #ffd24a, #ffcf4a) !important;
+  color: #111 !important;
+  box-shadow: 0 20px 56px rgba(255,210,74,0.34), inset 0 -6px 18px rgba(255,200,60,0.06) !important;
+  border: 2px solid rgba(255,210,74,0.95) !important;
+  transform: translateY(-4px) scale(1.02);
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 140ms ease;
+}
+
+/* slightly stronger focus ring when keyboard-focused */
+.react-calendar__tile--active:not(.react-calendar__tile--now) button:focus {
+  outline: none !important;
+  box-shadow: 0 22px 64px rgba(255,210,74,0.36), 0 0 0 6px rgba(255,210,74,0.08) !important;
+}
+
 /* Visual enhancements for Tracking */
 .tracking-column { transition: transform 240ms cubic-bezier(.2,.9,.2,1), box-shadow 240ms }
 .tracking-column:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(10,10,30,0.18) }
