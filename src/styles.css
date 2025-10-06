@@ -221,31 +221,3 @@ body,html,#root{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe 
 .app-header{width:100%;max-width:1100px;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
 .header-title{font-size:20px;font-weight:700;color:#fff}
 .header-actions .btn{min-width:92px}
-
-/* Enforce exact parity between 'today' and 'selected' tiles so
-   the yellow selected tile fills the same area as the orange today */
-.react-calendar__tile--now,
-.react-calendar__tile--now button,
-.react-calendar__tile--active:not(.react-calendar__tile--now),
-.react-calendar__tile--active:not(.react-calendar__tile--now) button {
-  /* same rounded shape */
-  border-radius: 10px !important;
-  /* same lift/translate */
-  transform: translateY(-3px) !important;
-  /* same border thickness (color differs) */
-  box-sizing: border-box !important;
-  padding: 0 !important;
-  /* align content center so number sits in middle */
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Make sure the inner button (when present) fills the entire tile area
-   so the visual fill matches the tile's border and radius exactly. */
-.react-calendar__tile button {
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: inherit !important;
-  padding: 0 !important;
-}
