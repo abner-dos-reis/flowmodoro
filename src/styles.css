@@ -181,11 +181,16 @@ body,html,#root{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe 
 /* selected (not today) — full yellow fill and clear highlight */
 .react-calendar__tile--active:not(.react-calendar__tile--now),
 .react-calendar__tile--active:not(.react-calendar__tile--now) button {
+  /* match the 'now' tile's sizing and shape but with yellow colors */
   background: linear-gradient(90deg, #ffd24a, #ffcf4a) !important;
   color: #111 !important;
-  box-shadow: 0 20px 56px rgba(255,210,74,0.34), inset 0 -6px 18px rgba(255,200,60,0.06) !important;
+  /* similar shadow strength to the orange 'now' tile */
+  box-shadow: 0 14px 48px rgba(255,210,74,0.30), inset 0 -6px 18px rgba(255,200,60,0.06) !important;
   border: 2px solid rgba(255,210,74,0.95) !important;
-  transform: translateY(-4px) scale(1.02);
+  /* same radius and translate as the orange tile */
+  border-radius: 10px !important;
+  transform: translateY(-3px) !important;
+  /* ensure inner button also fills and uses same radius */
   width: 100% !important;
   height: 100% !important;
   padding: 0 !important;
