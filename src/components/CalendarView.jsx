@@ -17,7 +17,6 @@ export default function CalendarView({ onClose }) {
   const [totals, setTotals] = useState({})
   const [rawSessions, setRawSessions] = useState([])
   const [pendingCount, setPendingCount] = useState(0)
-  const [animateKey, setAnimateKey] = useState(0)
 
   async function loadForDay(d) {
     const day = localDayForDate(d)
@@ -56,7 +55,6 @@ export default function CalendarView({ onClose }) {
       const uns = (all || []).filter(x => !x.synced)
       setPendingCount(uns.length)
     } catch (e) { setPendingCount(0) }
-    setAnimateKey(k => k + 1)
   }, [date])
 
   function humanTime(s) {
@@ -73,7 +71,7 @@ export default function CalendarView({ onClose }) {
         <button className="btn btn-secondary mt-2" onClick={onClose}>Back</button>
       </div>
 
-      <div className="tracking-top d-flex justify-content-center mb-3 fade-in" key={animateKey}>
+      <div className="tracking-top d-flex justify-content-center mb-3 fade-in">
         <div className="calendar-frosted" style={{maxWidth:420}}>
           <Calendar onChange={setDate} value={date} />
         </div>

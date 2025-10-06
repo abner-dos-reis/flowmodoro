@@ -115,6 +115,22 @@ body,html,#root{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe 
   border-radius: 10px !important;
   border: 2px solid rgba(255,92,46,0.95) !important;
 }
+
+/* Prevent visual 'flash' when switching selected date: no remounts needed; animate only color changes */
+.react-calendar__tile, .react-calendar__tile button {
+  transition: background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease, transform 120ms ease;
+}
+
+/* If a tile is both 'now' and 'active' (clicked today), keep today orange as dominant */
+.react-calendar__tile--now.react-calendar__tile--active,
+.react-calendar__tile--active.react-calendar__tile--now,
+.react-calendar__tile--now.react-calendar__tile--active button,
+.react-calendar__tile--active.react-calendar__tile--now button {
+  /* give precedence to 'now' color */
+  background: linear-gradient(90deg, var(--accent), #ff3f10) !important;
+  color: #fff !important;
+  border: 2px solid rgba(255,92,46,0.95) !important;
+}
 .react-calendar__tile--active { background: linear-gradient(90deg,#2b9bff,#4fc3ff) !important; color: #fff !important; box-shadow: 0 8px 20px rgba(43,155,255,0.18) }
 .react-calendar__navigation { display:flex;align-items:center;justify-content:center;gap:10px }
 .react-calendar__navigation button { background: transparent; border: none; color: rgba(255,255,255,0.95); padding:6px 10px }
