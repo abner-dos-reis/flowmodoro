@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  flowmodoro-frontend:
+    build: .
+    image: flowmodoro-frontend:latest
+    ports:
+      - "127.0.0.1:5174:80" # avoid 5173 which you already use
+    restart: unless-stopped
+  flowmodoro-backend:
+    build: ./backend
+    image: flowmodoro-backend:latest
+    environment:
+      - PORT=3001
+      - DB_PATH=/data/flowmodoro.sqlite
+    volumes:
+      - flowmodoro-data:/data
+    restart: unless-stopped
+
+volumes:
+  flowmodoro-data:
+    driver: local

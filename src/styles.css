@@ -1,0 +1,182 @@
+.tracking-title {
+  margin-bottom: 18px;
+}
+.tracking-h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 18px rgba(110,75,179,0.18), 0 1px 0 #fff;
+}
+.calendar-frosted {
+  background: linear-gradient(180deg, rgba(110,75,179,0.18), rgba(255,255,255,0.04));
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(110,75,179,0.18);
+  padding: 12px 8px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+:root{
+  --page-bg: #f7f8fb;
+  --card-start: #6a7ef2;
+  --card-end: #6e4bb3;
+  /* stronger orange accent for visibility */
+  --accent: #ff5c2e; /* stronger/warmer orange */
+  --danger: #ff5a5a;
+}
+.body-bg{
+  min-height:100vh;
+}
+body,html,#root{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(135deg,#e6ecff 0%, #c8b1ff 40%, #6e4bb3 100%);}
+.bg-gradient{min-height:100vh;padding:38px;display:flex;align-items:center;justify-content:center;background:transparent}
+.flow-card{width:520px;border-radius:18px;background:linear-gradient(180deg,var(--card-start),var(--card-end));color:white;box-shadow:0 40px 80px rgba(30,20,80,0.25), 0 10px 30px rgba(30,20,80,0.12);border:1px solid rgba(255,255,255,0.06);transition:transform 160ms ease, box-shadow 160ms ease}
+.flow-card:hover{transform:translateY(-6px);box-shadow:0 48px 110px rgba(30,20,80,0.32), 0 18px 40px rgba(30,20,80,0.14)}
+.timer-panel h2{font-family:Poppins, sans-serif;font-size:30px;color:rgba(255,255,255,0.95);letter-spacing:1px;margin-bottom:6px;text-align:center;font-weight:600}
+.muted{color:rgba(255,255,255,0.92);opacity:0.95;text-align:center;margin-bottom:8px}
+.card-header-top{display:flex;align-items:center;justify-content:center;padding-bottom:8px}
+.card-actions .btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:6px 10px;border-radius:12px}
+.card-actions .btn-outline-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.18)}
+.card-actions .btn-outline-light:hover{background:rgba(255,255,255,0.06)}
+.card-header-top h2{margin:0}
+
+/* Ensure no icon or pseudo-element shows beside the title */
+.card-header-top h2::before, .card-header-top h2::after { display: none !important; content: none !important; }
+.card-header-top h2 img, .card-header-top .title-icon { display: none !important; }
+
+/* Force-hide any icon/SVG/pseudo-elements that may appear beside the title */
+.card-header-top img, .card-header-top svg, .card-header-top .icon, .card-header-top i { display: none !important; }
+.card-header-top *::before, .card-header-top *::after { display: none !important; content: none !important; }
+
+.card-actions-bottom .btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 14px;border-radius:16px}
+.card-actions-bottom .btn-outline-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.18)}
+.time-large{font-size:84px;font-weight:800;color:#fff;margin:18px 0}
+.time-large.running{filter:drop-shadow(0 8px 18px rgba(0,0,0,0.45))}
+.time-hidden{height:80px}
+.running-dot{width:12px;height:12px;background:#ffd24a;display:inline-block;border-radius:50%;margin-left:10px;box-shadow:0 6px 14px rgba(0,0,0,0.35)}
+.btn-lg{padding:0.6rem 1.4rem;border-radius:26px}
+.btn.btn-primary{background:linear-gradient(90deg,var(--accent),#ff5c2e);border:none;color:#fff}
+.btn.btn-danger{background:linear-gradient(90deg,#ff7b7b,var(--danger));border:none}
+.btn.btn-info{background:linear-gradient(90deg,#4fc3ff,#2b9bff);border:none;color:#fff}
+.btn.btn-secondary{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.08);color:#fff}
+.stat-label{color:rgba(255,255,255,0.85);font-size:13px}
+.stat-value{font-weight:800;color:white;font-size:18px}
+.config-modal-overlay{position:fixed;inset:0;background:radial-gradient(ellipse at center, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.55) 100%);display:flex;align-items:center;justify-content:center;padding:28px;z-index:1050}
+.config-modal{width:520px;border-radius:14px;transform:translateY(-6px)}
+.config-modal.frosted{background:linear-gradient(180deg, rgba(106,126,242,0.18), rgba(110,75,179,0.20));backdrop-filter:blur(8px) saturate(120%);border:1px solid rgba(255,255,255,0.08);box-shadow:0 40px 90px rgba(30,20,80,0.28);color:#fff;padding:22px}
+.config-modal .close-btn{background:transparent;border:none;color:#fff;font-size:18px}
+.config-modal .form-label{color:rgba(255,255,255,0.95);font-weight:700}
+.config-modal .input-soft{border-radius:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
+.config-modal .input-soft::placeholder{color:rgba(255,255,255,0.6)}
+.config-modal .input-soft:focus{outline:none;box-shadow:0 6px 22px rgba(255,138,61,0.12);border:1px solid rgba(255,138,61,0.95)}
+.config-modal .btn-cancel{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 14px;border-radius:12px}
+.config-modal .btn-save{background:linear-gradient(90deg,var(--accent),#ff5c2e);border:none;color:#fff;padding:10px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(255,110,60,0.18);font-weight:700}
+.config-modal .btn-save:hover{transform:translateY(-2px)}
+.config-modal .d-flex.justify-content-end{gap:12px}
+
+/* Make the modal text and fields more legible on small screens */
+@media (max-width: 600px){
+  .config-modal{width:100%;padding:18px;border-radius:12px}
+  .config-modal .time-large{font-size:56px}
+}
+.calendar-full{width:95%;max-width:1100px}
+
+/* Tracking view layout: calendar on top, columns below */
+.tracking-container{display:flex;flex-direction:column;gap:22px}
+.tracking-top{display:flex;justify-content:flex-start;align-items:flex-start}
+.tracking-top{display:flex;justify-content:center;align-items:flex-start}
+.tracking-columns{display:flex;gap:20px;align-items:flex-start;justify-content:center}
+.tracking-column{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));backdrop-filter:blur(8px);color:#fff;min-width:260;box-shadow:0 10px 30px rgba(20,20,40,0.08)}
+.col-header{font-weight:700;margin-bottom:8px}
+.col-total{font-size:14px;margin-bottom:12px;color:rgba(255,255,255,0.9)}
+.col-list{list-style:disc;margin-left:18px}
+.col-flow{background:linear-gradient(180deg, rgba(80,180,130,0.10), rgba(80,180,130,0.06))}
+.col-break{background:linear-gradient(180deg, rgba(255,138,61,0.08), rgba(255,138,61,0.04))}
+.col-big_break{background:linear-gradient(180deg, rgba(79,156,255,0.06), rgba(79,156,255,0.03))}
+
+/* Calendar (react-calendar) styling: remove white background, frosted look */
+.react-calendar {
+  background: transparent !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 6px !important;
+  box-shadow: none !important;
+}
+.react-calendar *, .react-calendar *:before, .react-calendar *:after { background: transparent !important; box-shadow: none !important; border: none !important }
+.react-calendar__month-view, .react-calendar__month-view__weekdays, .react-calendar__month-view__days { background: transparent !important }
+.react-calendar__month-view__weekdays__weekday abbr { color: rgba(255,255,255,0.86) !important; font-weight:700 }
+.react-calendar__tile, .react-calendar__month-view__days .react-calendar__tile { background: transparent !important; color: rgba(255,255,255,0.98) !important; padding: 6px 4px !important; border-radius:8px !important }
+.react-calendar__tile abbr { color: inherit !important; }
+.react-calendar__tile--now { 
+  background: linear-gradient(90deg, var(--accent), #ff3f10) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 48px rgba(255,92,46,0.30) !important;
+  transform: translateY(-3px);
+  border-radius: 10px !important;
+  border: 2px solid rgba(255,92,46,0.95) !important;
+}
+.react-calendar__tile--active { background: linear-gradient(90deg,#2b9bff,#4fc3ff) !important; color: #fff !important; box-shadow: 0 8px 20px rgba(43,155,255,0.18) }
+.react-calendar__navigation { display:flex;align-items:center;justify-content:center;gap:10px }
+.react-calendar__navigation button { background: transparent; border: none; color: rgba(255,255,255,0.95); padding:6px 10px }
+.react-calendar__month-view__weekdays { margin-bottom:6px }
+.react-calendar__month-view__days { gap:8px; }
+.react-calendar__tile:enabled:hover { background: rgba(255,255,255,0.04) !important; transform: translateY(-2px); }
+
+/* make tiles more readable */
+.react-calendar__tile abbr { font-size:14px; font-weight:600 }
+.react-calendar__tile--range { background: rgba(255,138,61,0.06) !important }
+
+/* Force buttons inside tiles (some react-calendar versions use button) */
+.react-calendar__tile button { background: transparent !important; color: inherit !important; border: none !important; width:100%; height:100%; padding:6px 4px !important }
+.react-calendar__navigation button {
+  color: rgba(255,255,255,0.9);
+}
+.react-calendar__month-view__weekdays__weekday abbr { color: rgba(255,255,255,0.75); }
+.react-calendar__tile {
+  background: transparent;
+  color: rgba(255,255,255,0.95);
+  border-radius: 6px;
+}
+.react-calendar__tile--now {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+.react-calendar__tile--active {
+  background: linear-gradient(90deg, #2b9bff, #4fc3ff);
+  color: white;
+  box-shadow: 0 8px 20px rgba(43,155,255,0.18);
+}
+.react-calendar__tile--range {
+  background: rgba(255,138,61,0.08);
+}
+
+/* Center the whole tracking area */
+.calendar-full{width:95%;max-width:1100px;margin:0 auto}
+
+/* Make small column blocks visually distinct and centered */
+.tracking-column .col-header{font-size:18px}
+.tracking-column .col-total{opacity:0.95}
+
+@media (max-width:800px){
+  .tracking-columns{flex-direction:column;align-items:center}
+  .tracking-top{justify-content:center}
+}
+
+/* Visual enhancements for Tracking */
+.tracking-column { transition: transform 240ms cubic-bezier(.2,.9,.2,1), box-shadow 240ms }
+.tracking-column:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(10,10,30,0.18) }
+.col-header { display:flex;align-items:center;gap:10px }
+.col-icon { width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);color:#fff;font-weight:700 }
+.col-total { font-size:16px;font-weight:700;margin-bottom:10px }
+.big-total { font-size:28px;font-weight:900;color:#fff;margin-top:6px }
+
+/* small sync badge in header */
+.sync-badge { display:inline-block;background:rgba(255,255,255,0.08);color:#fff;padding:6px 10px;border-radius:18px;font-size:13px }
+.sync-badge.offline { background:rgba(255,80,80,0.12); }
+.fade-in { animation: fadeIn 320ms ease both }
+@keyframes fadeIn { from { opacity:0; transform: translateY(6px) } to { opacity:1; transform: translateY(0) } }
+
+/* Header */
+.app-header{width:100%;max-width:1100px;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.header-title{font-size:20px;font-weight:700;color:#fff}
+.header-actions .btn{min-width:92px}
