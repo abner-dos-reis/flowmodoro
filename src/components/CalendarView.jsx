@@ -66,9 +66,9 @@ export default function CalendarView({ onClose }) {
 
   return (
     <div className="calendar-full p-4 tracking-container container">
-      <div className="tracking-title text-center mb-4">
+      <div className="tracking-title text-center mb-4 position-relative">
+        <button aria-label="Voltar" className="btn btn-secondary back-arrow" onClick={onClose}>&lt;</button>
         <h2 className="tracking-h2">Tracking</h2>
-        <button className="btn btn-secondary mt-2" onClick={onClose}>Back</button>
       </div>
 
       <div className="tracking-top d-flex justify-content-center mb-3 fade-in">
