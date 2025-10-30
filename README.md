@@ -1,5 +1,10 @@
 # Flowmodoro
 
+**Built with**: AI for syntax | Human for logic | Learning clean, scalable code  
+All repos public to show my evolution as a developer 📈
+
+---
+
 ![Flowmodoro main view](screenshots/Screenshot1.png)
 
 **Flowmodoro** is a simple React + Bootstrap single-page app to track open-ended "flow" sessions with integrated breaks and a calendar view.
