@@ -25,20 +25,6 @@ It provides a timer, settings, local storage persistence, and a Docker Compose s
 
 ---
 
-### Quick Status & TODO
-
-* [x] App scaffold (React + Vite + Bootstrap)
-* [x] Timer UI (Start / Pause / Reset / Stop / Skip)
-* [x] Settings modal (saved to localStorage)
-* [x] Calendar tracking (daily view)
-* [x] Docker + nginx static frontend
-* [x] Express + SQLite backend (persistent volume)
-* [ ] ESC-to-close and validation for Settings
-* [ ] Small animations & responsive polish
-* [ ] Sync status UI (toasts & indicators)
-
----
-
 ### How to Run
 
 1. Build and run with Docker Compose:
@@ -84,8 +70,6 @@ Tracking view:
 
 ---
 
-### Notes
+## 📄 License
 
-* Current focus is on UI and timer logic.
-* Next steps: automatic break timers, long breaks after 4 flows, full settings persistence, and calendar details.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
